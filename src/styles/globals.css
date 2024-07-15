@@ -3,12 +3,25 @@
 @tailwind utilities;
 
 :root {
-
+    color: var(--cu de apitp);
 }
 
 .shadowBox {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.507);
 }
 
+.inputLogin {
+    @apply shadow-md rounded-md border-2 border-gray-300 p-2 text-sm m-[8px];
+}
 
+body {
+    background-color: beige;
+}
 
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
