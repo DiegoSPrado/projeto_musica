@@ -15,13 +15,7 @@
 }
 
 body {
-    background-color: beige;
+    background-color: #14181C
 }
 
-section ul li {
-    transition: transform .3s;
-}
 
-section ul li:hover {
-    transform: scale(1.1);
-}

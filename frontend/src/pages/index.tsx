@@ -1,4 +1,4 @@
-import { Children, useState } from "react";
+import {Exo_2 } from 'next/font/google'
 import Header from "@/components/Header";
 import Section from "@/components/Section";
 import { url } from "inspector";
@@ -7,9 +7,6 @@ import Modals from "@/components/Modals";
 
 
 let nome = "Diego"
-
-
-
 
 
 
@@ -67,18 +64,6 @@ const ListAlbuns=[
 
 export default function Home() {
   
-  const [showModal, setShowModal] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
-
-  const handleShow = (item: any) => {
-    setSelectedItem(item);
-    setShowModal(true);
-  };
-
-  const handleClose = () => {
-    setShowModal(false);
-    setSelectedItem(null);
-  };
 
   return (
     <main>
@@ -91,18 +76,14 @@ export default function Home() {
          {
           ListArtistas.map(function(item) {
             return(
-              <ListItens action onClick={() => console.log('clicou')} key={item.id}> 
-               oi
-              {item.image}
-              {item.alt} 
+              <ListItens  key={item.id}
+              image={item.image}
+              alt={item.alt} 
+              > 
               </ListItens>
             )
           })
          }
-
-         <Modals show={showModal} onHide={handleClose}>
-              <p>{selectedItem?.content}</p>
-         </Modals>
         </Section>
         
      
