@@ -23,9 +23,9 @@ export default function Header() {
             
             <Link href={"/Login"}>Login</Link>
             
-            <Link href={"/personal_list/inicial"}>Home</Link>
+            <Link href={"/"}>Home</Link>
         
-            <Link href={"/"}>Minha Lista</Link>
+            <Link href={"/personal_list/personallist"}>Minha Lista</Link>
         </div>
     )
 }

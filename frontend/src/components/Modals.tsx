@@ -12,27 +12,24 @@ const Modal_Style ={
     borderRadius: '10px',
 }
 
-type ModalsProps = {
-    show: boolean,
-    onHide: (isOpen: boolean) => void,
-    children: React.ReactNode;
-    
-}
-export default function Modals({show, onHide, children}: ModalsProps) {
+//onClick={() =>onHide(false)}
+export default function Modals() {
   
-    if( show ){
+    
 
     return(
         <div className='fixed top-0 bottom-0 left-0 right-0 bg-secundary z-[1000]'>
             <div style={Modal_Style} className='absolute'>
                 <div className="cursor-pointer  inline-block absolute top-0 right-0 p-[5px] m-[5px]"
-                onClick={() =>onHide(false)} ><GrClose/></div>
+                 >
+                    <GrClose/>
+                </div> 
                 <div>cu doce</div>
-                <div>{children}</div>
+                
             </div>
             
         </div>
     )
-}
+
     return null;
 }
